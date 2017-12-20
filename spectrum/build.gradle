@@ -14,7 +14,7 @@ ext {
     siteUrl = 'https://github.com/the-blue-alliance/spectrum/'
     gitUrl = 'https://github.com/the-blue-alliance/spectrum.git'
 
-    libraryVersion = '0.7.1'
+    libraryVersion = '0.7.0'
     libraryVersionCode = buildVersionCode(libraryVersion)
 
     developerId = 'nwalters512'
@@ -28,7 +28,7 @@ ext {
 
 android {
     compileSdkVersion 23
-    buildToolsVersion '25.0.0'
+    buildToolsVersion "23.0.3"
 
     defaultConfig {
         minSdkVersion 15

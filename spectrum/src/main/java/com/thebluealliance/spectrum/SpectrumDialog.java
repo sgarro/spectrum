@@ -40,7 +40,6 @@ public class SpectrumDialog extends DialogFragment implements SpectrumPalette.On
     private OnColorSelectedListener mListener;
     private int mOutlineWidth = 0;
     private int mFixedColumnCount = -1;
-    private int mFixedEvenColumnCount = -1;
     private int mThemeResId = 0;
 
     public SpectrumDialog() {
@@ -102,15 +101,6 @@ public class SpectrumDialog extends DialogFragment implements SpectrumPalette.On
          */
         public Builder setFixedColumnCount(int columnCount) {
             mArgs.putInt(KEY_FIXED_COLUMN_COUNT, columnCount);
-            return this;
-        }/**
-         * Tells the underlying palette to use a fixed number for even columns during layout.
-         *
-         * @param columnCount how many columns to use
-         * @return This {@link Builder} for method chaining
-         */
-        public Builder setFixedEvenColumnCount(int columnCount) {
-            mArgs.putInt(KEY_FIXED_EVEN_COLUMN_COUNT, columnCount);
             return this;
         }
 
@@ -323,8 +313,6 @@ public class SpectrumDialog extends DialogFragment implements SpectrumPalette.On
 
         if (args != null && args.containsKey(KEY_FIXED_COLUMN_COUNT)) {
             mFixedColumnCount = args.getInt(KEY_FIXED_COLUMN_COUNT);
-        }if (args != null && args.containsKey(KEY_FIXED_COLUMN_EVEN_COUNT)) {
-            mFixedColumnCount = args.getInt(KEY_FIXED_COLUMN_EVEN_COUNT);
         }
 
         if (args != null && args.containsKey(KEY_THEME_RES_ID)) {
