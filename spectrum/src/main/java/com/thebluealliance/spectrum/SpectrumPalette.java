@@ -41,8 +41,10 @@ public class SpectrumPalette extends LinearLayout {
     private int mOriginalPaddingTop = 0;
     private int mOriginalPaddingBottom = 0;
     private boolean mSetPaddingCalledInternally = false;
+    private boolean even = true;
 
     private int mNumColumns = 2;
+    private int mNumEvenColumns = 2;
     private int mOldNumColumns = -1;
     private boolean mViewInitialized = false;
 
@@ -245,6 +247,14 @@ public class SpectrumPalette extends LinearLayout {
                 addView(row);
                 row = createRow();
                 numItemsInRow = 0;
+                if(even==true){
+                  mNumColumns=6;
+                  even=false;
+                }
+                else{
+                  mNumColumns=7;
+                  even=true;
+                }
             }
         }
 
@@ -254,6 +264,7 @@ public class SpectrumPalette extends LinearLayout {
                 numItemsInRow++;
             }
             addView(row);
+
         }
     }
 
