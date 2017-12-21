@@ -254,6 +254,8 @@ public class SpectrumPalette extends LinearLayout {
                   this.even = true;
                 }
             }
+            mNumColumns=6;
+            this.even = false;
         }
 
         if (numItemsInRow > 0) {
