@@ -45,7 +45,7 @@ public class SpectrumPalette extends LinearLayout {
     private int mNumColumns = 2;
     private int mOldNumColumns = -1;
     private boolean mViewInitialized = false;
-    private boolean even  = true;
+    private boolean even  = false;
     private EventBus mEventBus;
 
     private List<ColorItem> mItems = new ArrayList<>();
@@ -254,8 +254,6 @@ public class SpectrumPalette extends LinearLayout {
                   this.even = true;
                 }
             }
-            mNumColumns=6;
-            this.even = false;
         }
 
         if (numItemsInRow > 0) {
